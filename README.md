@@ -46,30 +46,30 @@ prueba, debido a los requermientos y el tiempo de entrega.
     9. Al ingresar generamos un token que nos permite ejecutar la acciones del
        aplicativo.
 
-    9. Accedemos a http://localhost:4200/ la pagina sera el formulario e acceso ingresamos 
+    10. Accedemos a http://localhost:4200/ la pagina sera el formulario e acceso ingresamos 
        credenciales si estan incorrecta muestra mensaje de error de credenciales 
        si son ok accedemos a http://localhost:4200/inicio/menu 
        menu de crear ciudad, crear sede, crear usuario, cerrar sesión 
        Nota: para acceder es importante ejecutar servicio Paso 7 y Paso 8 usuario contraseña
 
 
-    10. Al registrar muestra posibles errores como respectivo mensaje, si se registro correctamente muestra mensaje ok mensaje, 
+    11. Al registrar muestra posibles errores como respectivo mensaje, si se registro correctamente muestra mensaje ok mensaje, 
         todos los campos son requeridos.
 
-    11. Al registrar una sede o ciudad autamaticamente pasa a formulario de usuarios 
+    12. Al registrar una sede o ciudad autamaticamente pasa a formulario de usuarios 
         Nota: solo pueden crear los usuarios admin las ciudades sedes, usuarios con 
         otro perfil pueden crear solo usuarios no pueden crear sede ni ciudad.
 
-    12. Para ejecutar pruebas unitarias jest.io comando 
+    13. Para ejecutar pruebas unitarias jest.io comando 
         npm run test genera 6 test 
         de la capa Dao de datos crea una carpeta llamada coverage genera un index.html donde podemos la covertura posibles.
 
-    13. Al cerrar sesion nos redirije a formulario de acceso.
+    14. Al cerrar sesion nos redirije a formulario de acceso.
 
-    14. servicio de usuario  por sede y ciudad
+    15. servicio de usuario  por sede y ciudad
     		http://localhost:3001/api/v1/services/usuario/sede calle 26/Bogota
 
-    15. Servicio de consumo
+    16. Servicio de consumo
 ## *********************SERVICIOS API******************************
     GET  SIN RESTRINCIÓN
         http://localhost:3001/api/v1/services/migrate/docker/ 
@@ -112,7 +112,9 @@ prueba, debido a los requermientos y el tiempo de entrega.
         "IdSede": 1
        }
 
-    12. En el inicio comente que al final dejaria el script en base de datos MYSQL ya 
+## Creación Bases de Datos MYSQL
+
+    17. En el inicio comente que al final dejaria el script en base de datos MYSQL ya 
         que debido a imprevisto en mi equipo no pude instalar mysql y al descarga sql server 
         no me dejo levantar la intancia de la conexión con el cliente
         
