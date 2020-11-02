@@ -92,15 +92,15 @@ prueba, debido a los requermientos y el tiempo de entrega.
         "Loguinusuario": "admin" , 
         "Contrasena":"12345" 
        }
-   POST AUTENTICACIÓN 
-   http://localhost:3001/api/v1/services/sede/
+    POST AUTENTICACIÓN 
+    http://localhost:3001/api/v1/services/sede/
        {
         "Nombre":"sede carrera 30", 
         "Direccion": "calle 24 31 12", 
         "Telefeno": "3764523", 
         "IdCiudad": 1
        }
-   POST AUTENTICACIÓN 
+    POST AUTENTICACIÓN 
     http://localhost:3001/api/v1/services/usuario/
 
        {
