@@ -81,18 +81,18 @@ prueba, debido a los requermientos y el tiempo de entrega.
     GET SIN RESTRINCIÓN
         http://localhost:3001/api/v1/services/usuario/create/
 
-        POST AUTENTICACIÓN 
+    POST AUTENTICACIÓN  ADMIN
         http://localhost:3001/api/v1/services/ciudad/
         {
           "NombreCiudad": "Cali"
         }
-    POST AUTENTICACIÓN 
+    POST  SIN RESTRINCIÓN
         http://localhost:3001/api/v1/services/token/
        {
         "Loguinusuario": "admin" , 
         "Contrasena":"12345" 
        }
-    POST AUTENTICACIÓN 
+    POST AUTENTICACIÓN ADMIN
     http://localhost:3001/api/v1/services/sede/
        {
         "Nombre":"sede carrera 30", 
@@ -111,6 +111,9 @@ prueba, debido a los requermientos y el tiempo de entrega.
         "IdRoles" : 2,
         "IdSede": 1
        }
+
+    GET AUTENTICACIÓN ADMIN
+    http://localhost:3001/api/v1/services/usuario/sede calle 26/Bogota
 
 ## Creación Bases de Datos MYSQL
 
