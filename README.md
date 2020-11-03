@@ -13,8 +13,8 @@ prueba, debido a los requermientos y el tiempo de entrega.
 
     2. Git clone repositorio un unico proyecto frontend, Backend, base de datos
 
-    3. Tener  Docker instalado en el equipo *** conexión base de datos esta en  app-vass-backend/src/loaders/databaseLoader.ts
-       default esta en docker
+    3. Tener  Docker instalado en el equipo *** conexión base de datos esta en  
+       app-vass-backend/src/loaders/databaseLoader.ts default esta en docker
 
     4. Abrir cmd, git bash, terminal   arrastar ruta , donde esta el proyecto el
        archivo .docker-compose.yml
@@ -28,12 +28,13 @@ prueba, debido a los requermientos y el tiempo de entrega.
        http://localhost:3001/api/v1/services/prueba/ url para frontend y backend
        ya se ha postman o navegador Nota: url nodejs prueba
 
-    7. Para crear las tablas ejecutamos el siguiente recurso http://localhost:3001/api/v1/services/migrate/docker/
-       Nota: lo podemos ejecutar en el navegador o en postman es importante ejecutar este servicio para
-       tener acceso a los datos 
-       Nota: al ejecutar este servicio generamos base de datos, tablas roles, ciudad, sede, usuarios
-       tambien generamos Insert en las tablas de roles Admin, operacion, ciudad Bogota, Medellin, 
-       sede sede calle 26 asociada a bogota respuesta servicio
+    7. Para crear las tablas ejecutamos el siguiente recurso 
+       http://localhost:3001/api/v1/services/migrate/docker/
+       Nota: lo podemos ejecutar en el navegador o en postman es importante ejecutar 
+       este servicio para  tener acceso a los datos 
+       Nota: al ejecutar este servicio generamos base de datos, tablas roles, ciudad, 
+       sede, usuarios tambien generamos Insert en las tablas de roles Admin, operacion, ciudad Bogota, 
+       Medellin, sede sede calle 26 asociada a bogota respuesta servicio
        {
         "code": 200,
         "msg": "migrate exitoso",
@@ -54,8 +55,8 @@ prueba, debido a los requermientos y el tiempo de entrega.
        Nota: para acceder es importante ejecutar servicio Paso 7 y Paso 8 usuario contraseña
 
 
-    11. Al registrar muestra posibles errores como respectivo mensaje, si se registro correctamente muestra mensaje ok mensaje, 
-        todos los campos son requeridos.
+    11. Al registrar muestra posibles errores como respectivo mensaje, si se registro correctamente muestra 
+        mensaje ok mensaje, todos los campos son requeridos.
 
     12. Al registrar una sede o ciudad autamaticamente pasa a formulario de usuarios 
         Nota: solo pueden crear los usuarios admin las ciudades sedes, usuarios con 
@@ -63,7 +64,8 @@ prueba, debido a los requermientos y el tiempo de entrega.
 
     13. Para ejecutar pruebas unitarias jest.io comando 
         npm run test genera 6 test 
-        de la capa Dao de datos crea una carpeta llamada coverage genera un index.html donde podemos la covertura posibles.
+        de la capa Dao de datos crea una carpeta llamada coverage genera un index.html donde podemos la 
+        covertura posibles.
 
     14. Al cerrar sesion nos redirije a formulario de acceso.
 
