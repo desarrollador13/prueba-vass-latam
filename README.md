@@ -13,7 +13,8 @@ prueba, debido a los requermientos y el tiempo de entrega.
 
     2. Git clone repositorio un unico proyecto frontend, Backend, base de datos
 
-    3. Tener  Docker instalado en el equipo
+    3. Tener  Docker instalado en el equipo *** conexión base de datos esta en  app-vass-backend/src/loaders/databaseLoader.ts
+       default esta en docker
 
     4. Abrir cmd, git bash, terminal   arrastar ruta , donde esta el proyecto el
        archivo .docker-compose.yml
@@ -114,6 +115,10 @@ prueba, debido a los requermientos y el tiempo de entrega.
 
     GET AUTENTICACIÓN ADMIN
     http://localhost:3001/api/v1/services/usuario/sede calle 26/Bogota
+
+    Colección Postman Url
+
+    https://desarrollo-prueba.postman.co/build/workspace/My-Workspace~5c9e3486-d38b-459e-8515-2cb3bb1852b9/request/13313393-c1a159bd-8e58-48ea-b6e3-06bc81e24ec7
 
 ## Creación Bases de Datos MYSQL
 

@@ -37,8 +37,16 @@ export default class ServicesController {
 				 Contrasena == '' && IdRoles == '' && IdSede == ''){
 				return {status: 400, msg: 'los campos no pueden estar vacios' }
 			}
+			let valCountuser:any = await this.servicesDAO.validarUsuarioCount(IdSede)
+			if(valCountuser.msg =='error_server') {
+				return valCountuser
+			}
+			if(valCountuser.rows[0].count > 300) {
+				return {status: 204, msg: 'El registro maximo es de 300 usuarios no podemos registrar mas.' }
+			}
+
 			let valUser:any  = await this.servicesDAO.validarUsuariosCreado(Loguinusuario)
-			console.log(valUser,'Model.User()-->')
+			
 			if(valUser.msg =='existe') {
 				return {status: 200, msg: 'recurso ya existente' }
 			}

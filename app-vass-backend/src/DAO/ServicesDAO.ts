@@ -35,6 +35,27 @@ export class ServicesDAO {
 		}
 	}
 
+	public async validarUsuarioCount(Idsede:string|any): Promise<any> {
+		let data: any
+		try {
+		  const connection = await this.databaseConnection.getPool()
+			const query:any = await connection.query(`SELECT COUNT("idUsuarios")::int
+																								FROM public.sede se
+																								INNER JOIN public.usuarios us ON  se."idsede" = us."IdSede"
+																								WHERE us."IdSede" = '${Idsede}';`); //AND "Contrasena" = '${Contrasena}'
+			if(query.rowCount > 0 ){
+				data = {'status' :200, 'rows' : query.rows, msg:'existe'} 
+			}else{
+				data = {'status' :200, 'rows' : [], msg:'no_existe'} 
+			}
+			return data
+		}catch(error) {
+			console.log(error)
+			data ={'status' :500,'rows' : [], msg:'error_server'} 
+			return data
+		}
+	}
+
 	public async validarUsuariosCreado(Loguinusuario:string|any):Promise<any>{
 		let data: any
 		try {

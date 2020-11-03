@@ -10,7 +10,7 @@ export default class DatabaseConnection {
   private connection:any
   constructor() {}
   public async getPool() {
-    let connection
+   // let connection
      this.connection = new Pool({
         host:'database',
         user:'postgres',
