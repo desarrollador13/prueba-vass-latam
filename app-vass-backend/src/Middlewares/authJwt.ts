@@ -7,7 +7,6 @@ import { Container } from "typescript-ioc"
 export const isAdmin= async(req:Request|any, res:Response, next:NextFunction) => {
 
 	try{
-
 		let resQuery:any= null
 		const autentUsuariosDAO:AutentUsuariosDAO = Container.get(AutentUsuariosDAO)
 		resQuery= await autentUsuariosDAO.validarRoles(req.Loguinusuario)
@@ -40,12 +39,11 @@ export const verifyToken = async(req:Request|any, res:Response, next:NextFunctio
 	bearerHeader = req.headers["authorization"]
 
 	try {
-
 		let resQuery:any= null
 		if (!bearerHeader) return res.status(403).json({status: 403, msg: "token invalido"})
 		bearerToken = bearerHeader.split(' ')[1]
 		decoded = jwt.verify(bearerToken, config.SECRET)
-		console.log(decoded)
+		//console.log(decoded)
 		req.Loguinusuario = decoded.Loguinusuario
 
 		resQuery= await autentUsuariosDAO.obtenerUsuario(req.Loguinusuario)

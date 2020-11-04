@@ -24,7 +24,7 @@ export default class ServicesController {
 	}
  /** **/
  	async registrarUsuario(requets:object|any):Promise<any> {
- 		console.log(requets.body)
+ 		//console.log(requets.body)
 		let res:any
 		try{
 			const {NombreUsuario, ApellidosUsuario , Loguinusuario , Contrasena , IdRoles, IdSede} = requets.body
@@ -99,7 +99,7 @@ export default class ServicesController {
 			}
 			let hasContrasena = this.encryptarContrasena(Contrasena)
 			consultUser= await this.servicesDAO.validarUsuarioToken(Loguinusuario,hasContrasena)
-			console.log(consultUser,'ooconsultUserppoo')
+			//console.log(consultUser,'ooconsultUserppoo----------------------')
 			if(consultUser.rows.length < 1)
 				return {status:201, msg:"No existe el usuario", token: ''}
 			const matchPassword = await this.compareContrasena(

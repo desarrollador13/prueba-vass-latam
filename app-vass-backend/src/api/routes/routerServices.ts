@@ -123,26 +123,18 @@ export default class routerServices {
     this.app.get(
       '/services/migrate/',
       async (req: Request, res: Response, next: NextFunction) => {
-        try {
-          const migratedatabaseController: MigratedatabaseController = Container.get(MigratedatabaseController)
-          let responseModel = await migratedatabaseController.migracion()
-          res.status(200).json(responseModel)
-        } catch (error) {
-          console.log(error)
-        }
+        const migratedatabaseController: MigratedatabaseController = Container.get(MigratedatabaseController)
+        let responseModel = await migratedatabaseController.migracion()
+        res.status(200).json(responseModel)
       }
     )
 
     this.app.get(
       '/services/migrate/docker/',
       async (req: Request, res: Response, next: NextFunction) => {
-        try {
-          const migratedatabaseController: MigratedatabaseController = Container.get(MigratedatabaseController)
-          let responseModel = await migratedatabaseController.migracionDocker()
-          res.status(200).json(responseModel)
-        } catch (error) {
-          console.log(error)
-        }
+        const migratedatabaseController: MigratedatabaseController = Container.get(MigratedatabaseController)
+        let responseModel = await migratedatabaseController.migracionDocker()
+        res.status(200).json(responseModel)
       }
     )
   }
